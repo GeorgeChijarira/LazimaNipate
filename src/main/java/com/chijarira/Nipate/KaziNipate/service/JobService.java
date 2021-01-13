@@ -1,7 +1,4 @@
 package com.chijarira.Nipate.KaziNipate.service;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 
 import java.util.List;
 
@@ -15,9 +12,6 @@ import com.chijarira.Nipate.KaziNipate.repository.JobRepository;
 public class JobService implements JobServiceInterface{
 
 	
-	@PersistenceContext
-	private EntityManager em;
-	
 
 	@Autowired
 	private JobRepository repository;
@@ -28,4 +22,11 @@ public class JobService implements JobServiceInterface{
 		return (List<Job>) repository.findAll();
 	
 	}
+	@Override
+	public void insert(Job j)
+	{
+		repository.save(j);
+	}
+
+	
 	}

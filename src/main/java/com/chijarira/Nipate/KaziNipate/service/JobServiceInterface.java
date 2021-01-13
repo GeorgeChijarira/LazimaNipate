@@ -6,6 +6,7 @@ import com.chijarira.Nipate.KaziNipate.model.Job;
 public interface JobServiceInterface {
 
 	public List<Job> findAll();
+	public void insert(Job newJob);
 	
 }
 
