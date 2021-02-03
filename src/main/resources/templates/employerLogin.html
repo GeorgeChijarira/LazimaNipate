@@ -5,6 +5,8 @@
         <title>KaziNipate Employer-Login </title>
     </head>
     <body>
+    <div th:replace="fragments/headerNav :: nav">&nbsp;</div> 
+    
         <div th:if="${param.error}">
             Invalid username and password.
         </div>
